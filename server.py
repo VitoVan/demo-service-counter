@@ -21,6 +21,6 @@ class Server(BaseHTTPRequestHandler):
 
 if __name__ == '__main__':
     from http.server import HTTPServer
-    server = HTTPServer(('0.0.0.0', 8080), Server)
-    print('Starting server @ 8080, use <Ctrl-C> to stop')
+    server = HTTPServer(('0.0.0.0', 80), Server)
+    print('Starting server @ 80, use <Ctrl-C> to stop')
     server.serve_forever()
