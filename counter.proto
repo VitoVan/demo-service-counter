@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package demo.counter;
+
+// The Counter service definition.
+service Counter {
+  // Add count
+  rpc incr (CounterRequest) returns (CounterReply) {}
+
+  // Get count
+  rpc get (CounterRequest) returns (CounterReply) {}
+}
+
+// The request message containing the counter's name.
+message CounterRequest {
+  string name = 1;
+}
+
+// The response message containing the counter's count.
+message CounterReply {
+  string count = 1;
+}
